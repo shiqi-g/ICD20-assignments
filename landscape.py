@@ -135,6 +135,24 @@ while running:
     
     if sun_y < 300:
         white = (255, 255, 255)
+
+    if moon_y <= 300:
+        green = (33, 138, 37)
+
+    if sun_y < 300:
+        green = (37, 219, 24)
+
+    if moon_y <= 300:
+        red = (166, 5, 5)
+    
+    if sun_y < 300:
+        red = (255, 0, 0)
+
+    if moon_y <= 300:
+        beige = (168, 161, 91)
+    
+    if sun_y < 300:
+        beige = (227, 218, 134)
         
     # DRAWING
     screen.fill((sky_r, sky_g, sky_b))  # always the first drawing command
@@ -179,16 +197,16 @@ while running:
     pygame.draw.circle(screen, white, (cloud_x8 + 35, 50), 25)
     
     # Golf course
-    pygame.draw.rect(screen, (37, 219, 24), (0, 385, 640, 100)) # grass
+    pygame.draw.rect(screen, green, (0, 385, 640, 100)) # grass
     pygame.draw.ellipse(screen, (33, 138, 37), (145, 385, 350, 20)) # green
     pygame.draw.ellipse(screen, white, (300, 385, 40, 10)) # hole
-    pygame.draw.rect(screen, (255, 0, 0), (320, 220, 80, 50)) # flag
+    pygame.draw.rect(screen, red, (320, 220, 80, 50)) # flag
     pygame.draw.rect(screen, white, (317.5, 220, 5, 170)) # flagstick
-    pygame.draw.ellipse(screen, (227, 218, 134), (440, 425, 300, 100)) # bunker
+    pygame.draw.ellipse(screen, beige, (440, 425, 300, 100)) # bunker
     pygame.draw.rect(screen, (59, 30, 30), (580, 285, 50, 100)) # tree trunk
-    pygame.draw.circle(screen, (28, 186, 86), (630, 250), 40) # tree leaves 1
-    pygame.draw.circle(screen, (28, 186, 86), (580, 280), 40) # tree leaves 2
-    pygame.draw.circle(screen, (28, 186, 86), (580, 235), 40) # tree leaves 3
+    pygame.draw.circle(screen, green, (630, 250), 40) # tree leaves 1
+    pygame.draw.circle(screen, green, (580, 280), 40) # tree leaves 2
+    pygame.draw.circle(screen, green, (580, 235), 40) # tree leaves 3
 
     # Must be the last two lines
     # of the game loop
