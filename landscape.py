@@ -31,6 +31,8 @@ sun_y = 90
 moon_y = 800
 sun_dir = True
 moon_dir = True
+bird_x1 = 450
+bird_x2 = 450
 
 # ---------------------------
 
@@ -61,6 +63,8 @@ while running:
     cloud_x6 += 2.45
     cloud_x7 += 3.6
     cloud_x8 += 2.728
+    bird_x1 += 3.12
+    bird_x2 += 2.89
     
     if cloud_x1 > WIDTH + 25:
         cloud_x1 = -100
@@ -85,6 +89,12 @@ while running:
     
     if cloud_x8 > WIDTH + 25:
         cloud_x8 = -100
+
+    if bird_x1 > WIDTH + 30:
+        bird_x1 = -100
+
+    if bird_x2 > WIDTH + 30:
+        bird_x2 = -100
 
     if sun_dir:
         sun_y += 2.5
@@ -274,7 +284,14 @@ while running:
     pygame.draw.circle(screen, white, (cloud_x8, 45), 25)
     pygame.draw.circle(screen, white, (cloud_x8 + 40, 40), 25)
     pygame.draw.circle(screen, white, (cloud_x8 + 35, 50), 25)
-    
+
+    # Bird
+    pygame.draw.circle(screen, (0, 0, 0), (bird_x1, 110), 15, draw_top_right = True, draw_top_left = True, width = 3)
+    pygame.draw.circle(screen, (0, 0, 0), (bird_x1 + 30, 110), 15, draw_top_right = True, draw_top_left = True, width = 3)
+
+    pygame.draw.circle(screen, (0, 0, 0), (bird_x2 + 20, 150), 15, draw_top_right = True, draw_top_left = True, width = 3)
+    pygame.draw.circle(screen, (0, 0, 0), (bird_x2 + 50, 150), 15, draw_top_right = True, draw_top_left = True, width = 3)
+
     # Golf course
     pygame.draw.rect(screen, green, (0, 385, 640, 100)) # grass
     pygame.draw.ellipse(screen, (33, 138, 37), (145, 385, 350, 20)) # green
