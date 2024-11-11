@@ -152,8 +152,74 @@ while running:
         beige = (168, 161, 91)
     
     if sun_y < 300:
-        beige = (227, 218, 134)
-        
+        beige = (227, 218, 134) 
+
+    if moon_y <= 300:
+        star_x1 = 30
+    
+    if sun_y < 300:
+        star_x1 = 700
+
+    if moon_y <= 300:
+        star_x2 = 10
+
+    if sun_y < 300:
+        star_x2 = 700
+
+    if moon_y <= 300:
+        star_x3 = 205
+
+    if sun_y < 300:
+        star_x3 = 700
+
+    if moon_y <= 300:
+        star_x4 = 355
+
+    if sun_y < 300:
+        star_x4 = 700
+
+    if moon_y <= 300:
+        star_x5 = 265
+
+    if sun_y < 300:
+        star_x5 = 700
+    
+    if moon_y <= 300:
+        star_x6 = 410
+
+    if sun_y < 300:
+        star_x6 = 700
+
+    if moon_y <= 300:
+        star_x7 = 455
+
+    if sun_y < 300:
+        star_x7 = 700
+
+    if moon_y <= 300:
+        star_x8 = 535
+
+    if sun_y < 300:
+        star_x8 = 700
+
+    if moon_y <= 300:
+        star_x9 = 510
+
+    if sun_y < 300:
+        star_x9 = 700
+
+    if moon_y <= 300:
+        star_x10 = 620
+    
+    if sun_y < 300:
+        star_x10 = 700
+
+    if moon_y <= 300:
+        star_x11 = 125
+    
+    if sun_y < 300:
+        star_x11 = 700
+    
     # DRAWING
     screen.fill((sky_r, sky_g, sky_b))  # always the first drawing command
 
@@ -162,6 +228,19 @@ while running:
 
     # Sun
     pygame.draw.circle(screen, (247, 232, 10), (120, sun_y), 60)
+
+    # Stars
+    pygame.draw.circle(screen, (255, 255, 255), (star_x1, 50), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x2, 230), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x3, 70), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x4, 120), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x5, 215), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x6, 30), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x7, 230), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x8, 140), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x9, 45), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x10, 100), 2)
+    pygame.draw.circle(screen, (255, 255, 255), (star_x11, 150), 2)
 
     # Clouds
     pygame.draw.circle(screen, white, (cloud_x1, 110), 25)
