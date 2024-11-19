@@ -1,5 +1,4 @@
 # pygame template
-# hi!!!!!!! :))))))
 
 import pygame
 
